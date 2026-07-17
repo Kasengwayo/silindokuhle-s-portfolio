@@ -176,9 +176,10 @@ export const Route =
         },
 
         {
-          rel: "icon",
-          href: "/favicon.ico",
-          type: "image/x-icon",
+            rel: "icon",
+            href: "/profile.png",
+            type: "image/png",
+
         },
       ],
     }),
