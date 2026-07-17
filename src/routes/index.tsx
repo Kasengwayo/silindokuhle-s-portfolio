@@ -100,6 +100,8 @@ function Portfolio() {
           <nav className="hidden gap-8 text-sm text-muted-foreground md:flex">
             <a href="#about" className="hover:text-foreground transition-colors">About</a>
             <a href="#experience" className="hover:text-foreground transition-colors">Experience</a>
+            <a href="#projects" className="hover:text-foreground transition-colors">Projects</a>
+            <a href="#certifications" className="hover:text-foreground transition-colors">Certifications</a>
             <a href="#venture" className="hover:text-foreground transition-colors">Kasengwayo</a>
             <a href="#contact" className="hover:text-foreground transition-colors">Contact</a>
           </nav>
