@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { ArrowUpRight, Mail, MapPin, Linkedin, Code2, Rocket, Users, Sparkles } from "lucide-react";
+import { ArrowUpRight, Mail, MapPin, Linkedin, Code2, Rocket, Users, Sparkles, Github, Award } from "lucide-react";
 
 export const Route = createFileRoute("/")({
   component: Portfolio,
@@ -26,6 +26,60 @@ const experience = [
   },
 ];
 
+const projects = [
+  {
+    name: "Fintex Solutions",
+    description:
+      "Business-oriented website for a modern B2B trading and supply company in KwaZulu-Natal — built with WordPress and the Divi theme to communicate services, products, and value proposition.",
+    tech: "WordPress · Divi",
+    url: "https://github.com/Kasengwayo/Fintex-Solution",
+  },
+  {
+    name: "Invoice AI System",
+    description:
+      "Python-based system that streamlines invoice handling with AI — automating extraction and processing to reduce manual admin work.",
+    tech: "Python · AI",
+    url: "https://github.com/Kasengwayo/Invoice_ai_system",
+  },
+  {
+    name: "Personal Finance Tracker",
+    description:
+      "Java Swing desktop app for tracking income and expenses with a clean summary view — a focused tool for personal budgeting.",
+    tech: "Java · Swing",
+    url: "https://github.com/Kasengwayo/Personal-Finance-Tracker",
+  },
+  {
+    name: "Servlet API",
+    description:
+      "Java Servlet project exploring backend fundamentals — request/response handling, routing, and server-side rendering patterns.",
+    tech: "Java · Servlets",
+    url: "https://github.com/Kasengwayo/Servlet-API",
+  },
+];
+
+const certifications = [
+  {
+    name: "Full-Stack Development",
+    issuer: "FNB App Academy",
+    date: "Issued Jul 2025",
+  },
+  {
+    name: "Artificial Intelligence Fundamentals with Capstone",
+    issuer: "IBM",
+    date: "Issued Mar 2025",
+  },
+  {
+    name: "Cybersecurity Fundamentals",
+    issuer: "IBM",
+    date: "Issued Feb 2025",
+  },
+  {
+    name: "Artificial Intelligence Fundamentals",
+    issuer: "IBM",
+    date: "Issued Jan 2025",
+  },
+];
+
 const education = [
   {
     school: "Richfield Graduate Institute of Technology",
@@ -46,6 +100,8 @@ function Portfolio() {
           <nav className="hidden gap-8 text-sm text-muted-foreground md:flex">
             <a href="#about" className="hover:text-foreground transition-colors">About</a>
             <a href="#experience" className="hover:text-foreground transition-colors">Experience</a>
+            <a href="#projects" className="hover:text-foreground transition-colors">Projects</a>
+            <a href="#certifications" className="hover:text-foreground transition-colors">Certifications</a>
             <a href="#venture" className="hover:text-foreground transition-colors">Kasengwayo</a>
             <a href="#contact" className="hover:text-foreground transition-colors">Contact</a>
           </nav>
@@ -203,6 +259,63 @@ function Portfolio() {
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Projects */}
+      <section id="projects" className="border-b border-border/60 py-24">
+        <div className="container-page grid gap-12 md:grid-cols-12">
+          <div className="md:col-span-4">
+            <p className="text-xs font-medium uppercase tracking-[0.2em] text-accent">Projects</p>
+            <h2 className="mt-3 font-display text-3xl md:text-4xl">Selected work from GitHub.</h2>
+            <a
+              href="https://github.com/Kasengwayo"
+              target="_blank" rel="noreferrer"
+              className="mt-6 inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground"
+            >
+              <Github className="h-4 w-4" /> github.com/Kasengwayo
+            </a>
+          </div>
+          <div className="md:col-span-8 grid gap-4 sm:grid-cols-2">
+            {projects.map((p) => (
+              <a
+                key={p.name}
+                href={p.url}
+                target="_blank" rel="noreferrer"
+                className="group rounded-2xl border border-border bg-card p-6 transition-colors hover:border-accent/60"
+              >
+                <div className="flex items-start justify-between gap-3">
+                  <h3 className="font-display text-lg">{p.name}</h3>
+                  <ArrowUpRight className="h-4 w-4 text-muted-foreground transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+                </div>
+                <p className="mt-3 text-sm text-muted-foreground">{p.description}</p>
+                <p className="mt-4 text-xs font-medium uppercase tracking-[0.15em] text-accent">{p.tech}</p>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Certifications */}
+      <section id="certifications" className="border-b border-border/60 py-24">
+        <div className="container-page grid gap-12 md:grid-cols-12">
+          <div className="md:col-span-4">
+            <p className="text-xs font-medium uppercase tracking-[0.2em] text-accent">Certifications</p>
+            <h2 className="mt-3 font-display text-3xl md:text-4xl">Credentials & continued learning.</h2>
+            <p className="mt-4 text-sm text-muted-foreground">
+              Certified through IBM and the FNB App Academy across AI, cybersecurity, and full-stack development.
+            </p>
+          </div>
+          <div className="md:col-span-8 grid gap-4 sm:grid-cols-2">
+            {certifications.map((c) => (
+              <div key={c.name} className="rounded-2xl border border-border bg-card p-6">
+                <Award className="h-5 w-5 text-gold" />
+                <h3 className="mt-4 font-display text-lg leading-snug">{c.name}</h3>
+                <p className="mt-2 text-sm font-medium text-accent">{c.issuer}</p>
+                <p className="mt-1 text-xs text-muted-foreground">{c.date}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
