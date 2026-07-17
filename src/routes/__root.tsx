@@ -108,6 +108,11 @@ export const Route =
         },
 
         {
+          name: "google-site-verification",
+          content: "ITmPm7EML9Fjqb0TcW3m9nMn69wOjSV-xdRB0rWOOKo",
+        },
+
+        {
           name: "author",
           content: "Silindokuhle Bongisipho Zungu",
         },
