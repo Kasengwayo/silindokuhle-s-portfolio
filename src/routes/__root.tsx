@@ -222,7 +222,7 @@ function RootShell({ children }: { children: ReactNode }) {
               sameAs: [
                 "https://github.com/Kasengwayo",
 
-                "https://www.linkedin.com/in/YOUR-LINKEDIN/",
+                "https://www.linkedin.com/in/silindokuhle-bongisipho-zungu-49009631b/",
               ],
 
               knowsAbout: [
