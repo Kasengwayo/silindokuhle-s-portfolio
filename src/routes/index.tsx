@@ -26,6 +26,60 @@ const experience = [
   },
 ];
 
+const projects = [
+  {
+    name: "Fintex Solutions",
+    description:
+      "Business-oriented website for a modern B2B trading and supply company in KwaZulu-Natal — built with WordPress and the Divi theme to communicate services, products, and value proposition.",
+    tech: "WordPress · Divi",
+    url: "https://github.com/Kasengwayo/Fintex-Solution",
+  },
+  {
+    name: "Invoice AI System",
+    description:
+      "Python-based system that streamlines invoice handling with AI — automating extraction and processing to reduce manual admin work.",
+    tech: "Python · AI",
+    url: "https://github.com/Kasengwayo/Invoice_ai_system",
+  },
+  {
+    name: "Personal Finance Tracker",
+    description:
+      "Java Swing desktop app for tracking income and expenses with a clean summary view — a focused tool for personal budgeting.",
+    tech: "Java · Swing",
+    url: "https://github.com/Kasengwayo/Personal-Finance-Tracker",
+  },
+  {
+    name: "Servlet API",
+    description:
+      "Java Servlet project exploring backend fundamentals — request/response handling, routing, and server-side rendering patterns.",
+    tech: "Java · Servlets",
+    url: "https://github.com/Kasengwayo/Servlet-API",
+  },
+];
+
+const certifications = [
+  {
+    name: "Full-Stack Development",
+    issuer: "FNB App Academy",
+    date: "Issued Jul 2025",
+  },
+  {
+    name: "Artificial Intelligence Fundamentals with Capstone",
+    issuer: "IBM",
+    date: "Issued Mar 2025",
+  },
+  {
+    name: "Cybersecurity Fundamentals",
+    issuer: "IBM",
+    date: "Issued Feb 2025",
+  },
+  {
+    name: "Artificial Intelligence Fundamentals",
+    issuer: "IBM",
+    date: "Issued Jan 2025",
+  },
+];
+
 const education = [
   {
     school: "Richfield Graduate Institute of Technology",
