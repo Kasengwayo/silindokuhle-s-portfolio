@@ -263,6 +263,63 @@ function Portfolio() {
         </div>
       </section>
 
+      {/* Projects */}
+      <section id="projects" className="border-b border-border/60 py-24">
+        <div className="container-page grid gap-12 md:grid-cols-12">
+          <div className="md:col-span-4">
+            <p className="text-xs font-medium uppercase tracking-[0.2em] text-accent">Projects</p>
+            <h2 className="mt-3 font-display text-3xl md:text-4xl">Selected work from GitHub.</h2>
+            <a
+              href="https://github.com/Kasengwayo"
+              target="_blank" rel="noreferrer"
+              className="mt-6 inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground"
+            >
+              <Github className="h-4 w-4" /> github.com/Kasengwayo
+            </a>
+          </div>
+          <div className="md:col-span-8 grid gap-4 sm:grid-cols-2">
+            {projects.map((p) => (
+              <a
+                key={p.name}
+                href={p.url}
+                target="_blank" rel="noreferrer"
+                className="group rounded-2xl border border-border bg-card p-6 transition-colors hover:border-accent/60"
+              >
+                <div className="flex items-start justify-between gap-3">
+                  <h3 className="font-display text-lg">{p.name}</h3>
+                  <ArrowUpRight className="h-4 w-4 text-muted-foreground transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+                </div>
+                <p className="mt-3 text-sm text-muted-foreground">{p.description}</p>
+                <p className="mt-4 text-xs font-medium uppercase tracking-[0.15em] text-accent">{p.tech}</p>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Certifications */}
+      <section id="certifications" className="border-b border-border/60 py-24">
+        <div className="container-page grid gap-12 md:grid-cols-12">
+          <div className="md:col-span-4">
+            <p className="text-xs font-medium uppercase tracking-[0.2em] text-accent">Certifications</p>
+            <h2 className="mt-3 font-display text-3xl md:text-4xl">Credentials & continued learning.</h2>
+            <p className="mt-4 text-sm text-muted-foreground">
+              Certified through IBM and the FNB App Academy across AI, cybersecurity, and full-stack development.
+            </p>
+          </div>
+          <div className="md:col-span-8 grid gap-4 sm:grid-cols-2">
+            {certifications.map((c) => (
+              <div key={c.name} className="rounded-2xl border border-border bg-card p-6">
+                <Award className="h-5 w-5 text-gold" />
+                <h3 className="mt-4 font-display text-lg leading-snug">{c.name}</h3>
+                <p className="mt-2 text-sm font-medium text-accent">{c.issuer}</p>
+                <p className="mt-1 text-xs text-muted-foreground">{c.date}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Kasengwayo Tech Hub */}
       <section id="venture" className="border-b border-border/60 bg-primary text-primary-foreground">
         <div className="container-page grid gap-12 py-24 md:grid-cols-12">
