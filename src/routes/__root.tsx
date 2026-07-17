@@ -178,7 +178,7 @@ export const Route =
         {
             rel: "icon",
             href: "/profile.png",
-            type: "image/png",
+            type: "image/jpeg",
 
         },
       ],
